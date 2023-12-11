@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Box_To_AWS_Button</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Box_To_AWS_Button.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+            <!-- Container wrapper -->
+            <div class="container">
+                <!-- Navbar brand -->
+                <a class="navbar-brand me-2">
+                    <img src="https://static.wixstatic.com/media/46c5e1_c99d053c15704191839034136d269368~mv2.png/v1/fill/w_225,h_75,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/dz_logo_black_and_white_transparent_back.png"
+                         "  />
+                </a>
+
+                <!-- Toggle button -->
+                @* <button data-mdb-collapse-init
+                class="navbar-toggler"
+                type="button"
+                data-mdb-target="#navbarButtonsExample"
+                aria-controls="navbarButtonsExample"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+                </button>*@
+
+                <!-- Collapsible wrapper -->
+                @* <div class="collapse navbar-collapse" id="navbarButtonsExample">
+                <!-- Left links -->
+                <ul class="navbar-nav me-auto mb-50 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link" href="#">Operation</a>
+                </li>
+                </ul>*@
+                <!-- Left links -->
+
+                <div class="d-flex align-items-center">
+                    
+                    <a class="nav-link text-dark  " asp-area="" asp-page="/Box_Page">Box Page</a>
+
+                    <button data-mdb-ripple-init type="button"  class="btn btn-link px-3 me-2">
+                        Login
+                    </button>
+                    <button data-mdb-ripple-init type="button" class="btn btn-primary me-3">
+                        Sign up for free
+                    </button>
+
+                </div>
+            </div>
+            <!-- Collapsible wrapper -->
+            <!-- Container wrapper -->
+        </nav>
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - Box_To_AWS_Button - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
